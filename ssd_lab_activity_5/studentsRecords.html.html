@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  width: 300px;
+  margin: auto;
+  border: 1px solid red;
+  margin-top=20%
+}
+
+body {
+	background-color: lightblue;
+}
+table,th,td{
+	border: 1px solid black ;
+}
+
+</style>
+</head>
+<body style="text-align:center;">
+
+<h1>Students Records</h1>
+<input type="text" id="myText" placeholder="Roll no">
+<input type="text" id="my" placeholder="Name">
+<table id="myTable">
+<button onclick="myFunction()">ADD</button>
+
+<br><br>
+<table id="myTable"  >
+<tr>
+<td>Roll no </td>
+<td>Name</td>
+</tr>
+</table>
+<script>
+function myFunction(){
+	var table=document.getElementById("myTable");
+	var row =table.insertRow(0);
+	var cell1=row.insertCell(0);
+	var cell2=row.insertCell(1);
+	var x = document.getElementById("myText").value;
+	var y = document.getElementById("my").value;
+	cell1.innerHTML=x;
+	cell2.innerHTML=y;
+}
+</script>
+</body>
+</html>
+
+
