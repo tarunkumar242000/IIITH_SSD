@@ -1,1 +1,0 @@
-select CONCAT(Fname," ",Minit," ",Lname)AS fullname, Ssn,Dnumber,Dname from EMPLOYEE e,DEPARTMENT d where e.Ssn=d.Mgr_ssn AND e.Dno=d.Dnumber AND EXISTS(select fname from EMPLOYEE,WORKS_ON where EMPLOYEE.Ssn=WORKS_ON.Essn AND Hours<40 AND d.Dnumber=EMPLOYEE.Dno);
